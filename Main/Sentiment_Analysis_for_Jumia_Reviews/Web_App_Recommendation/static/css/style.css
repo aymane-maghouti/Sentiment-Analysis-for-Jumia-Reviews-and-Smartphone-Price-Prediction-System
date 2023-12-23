@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.produit-carte {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height :500px;
+    max-height: 500px;
+    display: inline-block;
+    text-align: center;
+    overflow: auto;
+}
+
+.produit-carte img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.produit-carte .description {
+    text-align: left; /* Aligner la description à droite */
+}
+
+.produit-carte .commentaires {
+    text-align: left; /* Aligner les commentaires à droite */
+}
+
+.produit-carte textarea {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.produit-carte .actions {
+    text-align: center; /* Aligner les actions au centre */
+}
+
+.produit-carte button {
+    margin-top: 10px;
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.produit-carte button:hover {
+    background-color: #2980b9;
+}
+
+.produit-carte a {
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.produit-carte a:hover {
+    text-decoration: underline;
+}

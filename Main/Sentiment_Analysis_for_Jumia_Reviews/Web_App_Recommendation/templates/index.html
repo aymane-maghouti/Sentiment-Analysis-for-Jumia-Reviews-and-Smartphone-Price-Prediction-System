@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Afficher les Produits</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Aymane Maghouti</h1>
+    </div>
+
+    <div class="produit-container">
+
+       {% for produit in produits %}
+    <div class="produit-carte" id="produit{{ produit['id'] }}">
+        <div class="produit-carte-contenu">
+            <h3>{{ produit['nom'] }}</h3>
+            <div class="description">
+                <p>{{ produit['description'] }}</p>
+            </div>
+            <img src="{{ url_for('static', filename='uploads/' + produit['image_url']) }}" alt="{{ produit['nom'] }}">
+
+            <!-- Afficher les commentaires -->
+            {% if produit['commentaires'] %}
+                <div class="commentaires">
+                    <h4>Commentaires :</h4>
+                    <ul>
+                        {% for commentaire in produit['commentaires'] %}
+                            <li>{{ commentaire }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            <!-- Ajout du textarea et du bouton "Ajouter" avec des ID uniques -->
+            <div class="actions">
+                <textarea name="texte_commentaire" placeholder="Ajouter un commentaire"></textarea>
+                <button onclick="ajouterCommentaire('{{ produit['id'] }}')">Ajouter</button>
+                <button onclick="verifierRecommandation('{{ produit['id'] }}')">Vérifier Recommandation</button>
+
+            </div>
+
+
+
+        </div>
+    </div>
+{% endfor %}
+
+
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+</html>
