@@ -25,7 +25,7 @@ function predictPrice() {
     .then(response => response.json())
     .then(data => {
         // Afficher le résultat au client
-        document.getElementById("predictedPrice").textContent = 'Estimation du Prix : ' + data.predicted_price.toFixed(2) + ' DHS';
+        document.getElementById("predictedPrice").textContent = 'Price Estimation : ' + data.predicted_price.toFixed(2) + ' DHS';
         document.getElementById("result").style.display = 'block';
 
         // Réinitialiser les champs du formulaire

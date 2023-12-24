@@ -1,4 +1,5 @@
 from flask import Flask, render_template, redirect, request, jsonify
+
 import mysql.connector
 from comments_classification import analyze_sentiment
 from translate_comment import translate_french_to_english
@@ -60,7 +61,7 @@ def ajouter_commentaire():
         db.commit()
         return jsonify(success=True)
     except Exception as e:
-        print(f"Erreur lors de l'ajout du commentaire : {e}")
+        print(f"Error adding comment : {e}")
         cursor.close()
         db.rollback()
         return jsonify(success=False)

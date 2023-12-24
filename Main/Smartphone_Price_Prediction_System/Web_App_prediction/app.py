@@ -20,7 +20,7 @@ def index():
 @app.route('/predict', methods=['POST'])
 def predict():
     if request.method == 'POST':
-        # Récupérer les données du formulaire
+        # Retrieve form data
         data = request.json
         brand = map_brand_to_numeric(data['brand'])
         screen_size = float(data['screen_size'])

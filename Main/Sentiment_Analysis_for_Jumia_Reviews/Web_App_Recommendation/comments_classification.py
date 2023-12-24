@@ -6,8 +6,8 @@ import pickle
 from clean_comment import clean_text
 
 
-model_class = pickle.load(open('model.pkl', 'rb'))
-model_tfidf = pickle.load(open('model_tfidf.pkl', 'rb'))
+model_class = pickle.load(open('models/model.pkl', 'rb'))
+model_tfidf = pickle.load(open('models/model_tfidf.pkl', 'rb'))
 
 
 
@@ -43,13 +43,13 @@ def analyze_sentiment(product_id):
 
     # Clean comments
     cleaned_comments = [clean_text(comment) if pd.notnull(comment) else '' for comment in comments]
-    # cleaned_comments = [comment for comment in comments]
+
     print(cleaned_comments)
     # Transform comments using TF-IDF vectorizer
     comments_tfidf = model_tfidf.transform(cleaned_comments)
 
 
-    # Predict sentiment using Naive Bayes model
+    # Predict sentiment using SVM
     predictions = model_class.predict(comments_tfidf)
     print(predictions)
 
@@ -58,6 +58,7 @@ def analyze_sentiment(product_id):
     negative_count = sum(predictions == -1)
 
     print(positive_count ," -- ",negative_count)
+
     # Provide recommendations based on sentiment distribution
     if positive_count > negative_count:
         print(f"Product {product_id}: This product is recommended to buy.")

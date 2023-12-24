@@ -5,15 +5,23 @@ import re
 
 warnings.filterwarnings("ignore")
 
+# Function to get links from a specific page on Jumia website for mobile phones
 def get_links_from_page(page_no):
+    # Send a GET request to the Jumia website for mobile phones
     data  = requests.get(f'https://www.jumia.co.ke/catalog/?q=mobile+phones&page={page_no}').text
+    # Create a BeautifulSoup object to parse the HTML content
     soup  = BeautifulSoup(data)
+    # Find all links with the specified class attribute
     links = []
     for a in soup.findAll('a', attrs={'class':'core'}):
+        # Check if the 'href' attribute is present in the link
         if 'href' in a.attrs:
+            # Append the complete link to the list
             links.append('https://www.jumia.co.ke'+a['href'])
+    # Return a list of unique links
     return list(set(links))
 
+# Function to return a list of mobile phone brands in lowercase
 def brands():
   lst= [
     "Apple",
@@ -33,44 +41,64 @@ def brands():
     "Freeyond",
     'Sowhat',
     ]
+  # Convert the brand names to lowercase and return the list
   lst_lower = [brand.lower() for brand in lst]
   return lst_lower
 
+# Function to get reviews from a given URL
 def get_reviews(url):
+  # Send a GET request to the specified URL
   data    = requests.get(url).text
+  # Create a BeautifulSoup object to parse the HTML content
   soup    = BeautifulSoup(data)
+  # Find all divs with the specified class for star ratings
   rates=soup.findAll('div', attrs={'class':'stars _m _al -mvs'})
+  # Find all h3 elements with the specified class for review text
   text=soup.findAll('h3', attrs={'class':"-m -fs16 -pvs"})
+  # Extract text content from the found elements
   for i in range (len(rates)):
     rates[i]=rates[i].text
     text[i]=text[i].text
   reviews=[]
+  # Combine star ratings and review text into a formatted string
   for i in range(len(rates)):
     reviews.append("[ ("+rates[i]+") "+text[i]+" ]")
+  # Return the formatted reviews as a comma-separated string
   return ', '.join(reviews)
 
-
+# Function to extract megapixel values from a list of data
 def extract_mp_values(data_list):
+    # Concatenate the list of data into a single string
     data_string = ' '.join(data_list)
-    import re
+    # Use regular expression to find and extract megapixel values
     mp_values = re.findall(r'(\d.\d+\s?MP|\d+\s?MP)', data_string)
-
-    mp_values= [i.replace(' ','') for i in mp_values]
+    # Remove any spaces from the extracted values
+    mp_values = [i.replace(' ','') for i in mp_values]
+    # Return the list of extracted megapixel values
     return mp_values
 
 
+
+# Function to extract details of a mobile phone from a given URL
 def get_phone_details(url):
   try:
-
+    # Send a GET request to the specified URL
     data    = requests.get(url).text
+
+    # Create a BeautifulSoup object to parse the HTML content
     soup    = BeautifulSoup(data)
+
+    # Extract the phone name from the h1 tag
     phone_name=soup.find('h1').text
+
+    # Use regex to split the phone name into features
     pattern = re.compile(r'[^a-zA-Z0-9.]+')
 
     features = re.split(pattern, phone_name)
     name=features[0]
     sec_name=features[1]
 
+    # Check if the brand is in the predefined list of brands
     if name.lower() in brands():
       brand=features[0]
     elif sec_name.lower() in brands():
@@ -253,9 +281,15 @@ def get_phone_details(url):
 
 import pandas as pd
 df = pd.DataFrame()
+
+# Iterate through pages and links to extract phone details
 for i in range(1,50):
     for link in get_links_from_page(i):
         new_df = pd.DataFrame(get_phone_details(link),index=[0])
         df= pd.concat([df,new_df],ignore_index=True)
 
+# Save the DataFrame to a CSV file
 df.to_csv('jumia_mobile_phone.csv')
+
+
+

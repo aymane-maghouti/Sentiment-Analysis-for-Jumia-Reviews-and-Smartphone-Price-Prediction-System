@@ -13,25 +13,18 @@ import nltk
 
 
 def clean_text(text):
-    # Convert to lowercase
     text = text.lower()
 
-    # Expand contractions
     text = expand_contractions(text, contractions_dict)
 
-    # Remove punctuation
     text = text.translate(str.maketrans('', '', string.punctuation))
 
-    # Remove numbers
     text = re.sub(r'\d+', '', text)
 
-    # Remove non-alphanumeric characters
     text = remove_non_alphanumeric(text)
 
-    # Remove URLs
     text = remove_urls(text)
 
-    # Remove stop words with English
     stop_words = set(stopwords.words('english'))  # You can replace 'english' with the appropriate language
     words = word_tokenize(text)
     filtered_words = [word for word in words if word.lower() not in stop_words]
@@ -41,10 +34,8 @@ def clean_text(text):
     words = word_tokenize(text)
     filtered_words = [word for word in words if word.lower() not in stop_words]
 
-    # Remove short words
     text = remove_short_words(' '.join(filtered_words))
 
-    # Lemmatization (optional)
     lemmatizer = nltk.WordNetLemmatizer()
     filtered_words = [lemmatizer.lemmatize(word) for word in filtered_words]
 

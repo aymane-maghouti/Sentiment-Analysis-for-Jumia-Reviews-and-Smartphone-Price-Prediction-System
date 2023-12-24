@@ -3,7 +3,7 @@ function ajouterCommentaire(idProduit) {
 
     // Vérifier si le champ de commentaire est vide
     if (commentaire.trim() === '') {
-        alert('Veuillez saisir un commentaire avant d\'ajouter.');
+        alert('Please enter a comment before adding.');
         return;
     }
 
@@ -18,13 +18,13 @@ function ajouterCommentaire(idProduit) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            alert('Commentaire ajouté avec succès');
+            alert('Comment added successfully');
             // Vider le champ de commentaire
             document.querySelector(`#produit${idProduit} textarea[name="texte_commentaire"]`).value = '';
             // Rafraîchir la page
             location.reload();
         } else {
-            alert('Erreur lors de l\'ajout du commentaire');
+            alert('Error adding comment');
         }
     })
     .catch(error => console.error('Erreur:', error));
@@ -45,7 +45,7 @@ function verifierRecommandation(idProduit) {
         if (data.Recommandation !== undefined) {
             alert(data.Recommandation);  // Display the recommendation message
         } else {
-            alert('Erreur lors de la vérification de la recommandation.');
+            alert('Error checking recommendation.');
         }
     })
     .catch(error => console.error('Erreur:', error));

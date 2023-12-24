@@ -22,7 +22,7 @@ def contineus_learning():
 
             rows = cursor.fetchall()
 
-            # Obtenez les noms de colonnes à partir de la description du curseur
+            # Get column names from cursor description
             columns = [desc[0] for desc in cursor.description]
 
             df = pd.DataFrame(rows, columns=columns)

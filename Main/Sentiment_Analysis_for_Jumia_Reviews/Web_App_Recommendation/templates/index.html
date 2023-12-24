@@ -25,7 +25,7 @@
             <!-- Afficher les commentaires -->
             {% if produit['commentaires'] %}
                 <div class="commentaires">
-                    <h4>Commentaires :</h4>
+                    <h4>Comments :</h4>
                     <ul>
                         {% for commentaire in produit['commentaires'] %}
                             <li>{{ commentaire }}</li>
@@ -36,9 +36,9 @@
 
             <!-- Ajout du textarea et du bouton "Ajouter" avec des ID uniques -->
             <div class="actions">
-                <textarea name="texte_commentaire" placeholder="Ajouter un commentaire"></textarea>
-                <button onclick="ajouterCommentaire('{{ produit['id'] }}')">Ajouter</button>
-                <button onclick="verifierRecommandation('{{ produit['id'] }}')">Vérifier Recommandation</button>
+                <textarea name="texte_commentaire" placeholder="Add comment" ></textarea>
+                <button onclick="ajouterCommentaire('{{ produit['id'] }}')">Add Comment</button>
+                <button onclick="verifierRecommandation('{{ produit['id'] }}')">Recommandation</button>
 
             </div>
 

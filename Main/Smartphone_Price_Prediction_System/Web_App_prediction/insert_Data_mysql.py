@@ -19,10 +19,10 @@ def insert_Data(data):
 
         conn.commit()
 
-        print("Données insérées avec succès!")
+        print("Data inserted successfully!")
 
     except mysql.connector.Error as err:
-        print("Erreur lors de l'insertion des données:", err)
+        print("Error inserting data:", err)
         conn.rollback()
 
     finally:

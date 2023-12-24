@@ -10,7 +10,7 @@
     <div class="container">
         <h1>Estimation du Prix des Mobiles</h1>
         <form id="predictionForm">
-            <label for="brand">Marque :</label>
+            <label for="brand">Brand :</label>
             <select id="brand" name="brand">
                 <option value="Maxfone">Maxfone</option>
                 <option value="Infinix">Infinix</option>
@@ -30,7 +30,7 @@
 
             </select>
 
-            <label for="screen_size">Taille de l'écran :</label>
+            <label for="screen_size">Screen size :</label>
             <input type="number" id="screen_size" name="screen_size" step="0.1" required>
 
             <label for="ram">RAM (Go) :</label>
@@ -39,20 +39,20 @@
             <label for="rom">ROM (Go) :</label>
             <input type="number" id="rom" name="rom" required>
 
-            <label for="sim_type">Type de SIM :</label>
+            <label for="sim_type">SIM Type :</label>
             <select id="sim_type" name="sim_type">
                 <option value="Dual">Dual</option>
                 <option value="Single">Single</option>
             </select>
 
-            <label for="battery">Batterie (mAh) :</label>
+            <label for="battery">Battery (mAh) :</label>
             <input type="number" id="battery" name="battery" required>
 
-            <button type="button" onclick="predictPrice()">Prédire</button>
+            <button type="button" onclick="predictPrice()">Estimate</button>
         </form>
 
         <div id="result" style="display: none;">
-            <h2>Résultat :</h2>
+            <h2>Result :</h2>
             <p id="predictedPrice">   </p>
         </div>
     </div>
