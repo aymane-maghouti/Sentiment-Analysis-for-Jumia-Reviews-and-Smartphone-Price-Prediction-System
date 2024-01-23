@@ -162,7 +162,7 @@ Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 
 ### Sentiment Analysis and Recommendation System Web Application:
 - Here is the architecture of the Recommendation System  :
-- ![architecture](images/app web 1 - recommendation systrem.png)
+- ![architecture](images/app_web_1_recommendation_systrem.png)
 
 
 1. Install the required Python libraries:
@@ -186,7 +186,7 @@ Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 
 - Here is the architecture of the Price Prediction System :
 
-- ![architecture](images/app web 2 - prediction system.png)
+- ![architecture](images/app_web_2_prediction_system.png)
 
 
 
