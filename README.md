@@ -162,7 +162,7 @@ Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 
 ### Sentiment Analysis and Recommendation System Web Application:
 - Here is the architecture of the Recommendation System  :
-![architecture](images/app web 1 - recommendation systrem.png)
+- ![architecture](images/app web 1 - recommendation systrem.png)
 
 
 1. Install the required Python libraries:
@@ -186,7 +186,7 @@ Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 
 - Here is the architecture of the Price Prediction System :
 
-![architecture](images/app web 2 - prediction system.png)
+- ![architecture](images/app web 2 - prediction system.png)
 
 
 
@@ -261,7 +261,7 @@ By following these steps, you can run both web applications, each serving its sp
 ## 7. Conclusion
 - The project successfully combines sentiment analysis and price prediction to assist customers in making informed online purchasing decisions. The web application provides a user-friendly interface for simulating product recommendations.
 
-you can watch the demo video <a href="https://www.youtube.com/watch?v=rVQFABynodw" target="_blank">here</a> 
+- you can watch the demo video <a href="https://www.youtube.com/watch?v=rVQFABynodw" target="_blank">here</a> 
 
 ## 8. Contacts
 For any inquiries or further information, please contact:
