@@ -36,122 +36,128 @@ In addition to the sentiment analysis system, the project also includes a produc
 ``` bash   
 Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 │   README.md
+│
 ├───images
-│       app web 1 - recommendation systrem.png
-│       app web 2 - prediction system.png
+│       app_web_1_recommendation_systrem.png
+│       app_web_2_prediction_system.png
 │       architecture.png
 │
-└───Main
-    ├───Sentiment_Analysis_for_Jumia_Reviews
-    │   │   EDA_and_data_Cleaning.ipynb
-    │   │   final_data.csv
-    │   │   model.pkl
-    │   │   model_tfidf.pkl
-    │   │   Sentiments Analysis Model.ipynb
-    │   │
-    │   ├───.ipynb_checkpoints
-    │   │       EDA_and_data_Cleaning-checkpoint.ipynb
-    │   │
-    │   ├───Data Collection
-    │   │   │   cleaned_data_tp6.csv
-    │   │   │   final_data.csv
-    │   │   │   jumia_comments.csv
-    │   │   │   make_final_data.ipynb
-    │   │   │
-    │   │   ├───.ipynb_checkpoints
-    │   │   │       make_final_data-checkpoint.ipynb
-    │   │   │
-    │   │   └───web scrapping
-    │   │       │   Comments_scraping.ipynb
-    │   │       │   jumia_comments.csv
-    │   │       │   links.txt
-    │   │       │
-    │   │       └───.ipynb_checkpoints
-    │   │               Comments_scraping-checkpoint.ipynb
-    │   │
-    │   └───Web_App_Recommendation
-    │       │   app.py
-    │       │   clean_comment.py
-    │       │   comments_classification.py
-    │       │   model.pkl
-    │       │   model_tfidf.pkl
-    │       │   translate_comment.py
-    │       │
-    │       ├───models
-    │       │       model.pkl
-    │       │       model_tfidf.pkl
-    │       │
-    │       ├───static
-    │       │   ├───css
-    │       │   │       style.css
-    │       │   │
-    │       │   ├───js
-    │       │   │       script.js
-    │       │   │
-    │       │   └───uploads
-    │       │           1.jpg
-    │       │           2.jpg
-    │       │           Apple iPhone 15 Pro.jpg
-    │       │           Apple Watch.jpg
-    │       │           apple.jpg
-    │       │           clavie.jpg
-    │       │           logo.png
-    │       │           Redmi-A2-Blue.png
-    │       │           Samsung a34.jpg
-    │       │           Samsung_Galaxy.jpg
-    │       │           XIAOMI Redmi Note 12.jpg
-    │       │
-    │       ├───templates
-    │       │       index.html
-    │       │
-    │       └───__pycache__
-    │               clean_comment.cpython-310.pyc
-    │               comments_classification.cpython-310.pyc
-    │               translate_comment.cpython-310.pyc
-    │
-    └───Smartphone_Price_Prediction_System
-        │   best_model.pkl
-        │   EDA_smartphone_Data.ipynb
-        │   jumia_mobile_phone.csv
-        │   Regression_Model.ipynb
-        │   smartphone_Data.csv
-        │   Smartphone_data_transformation.ipynb
-        │   smartphone_Data_with_mean_price.csv
-        │
-        ├───.ipynb_checkpoints
-        │       EDA_smartphone_Data-checkpoint.ipynb
-        │       Regression_Model-checkpoint.ipynb
-        │       Smartphone_data_transformation-checkpoint.ipynb
-        │
-        ├───Data Collection
-        │       jumia_mobile_phone.csv
-        │       Mobile_phone_data_scraping.py
-        │
-        └───Web_App_prediction
-            │   app.py
-            │   continues_learning.py
-            │   data_encoding.py
-            │   insert_Data_mysql.py
-            │
-            ├───models
-            │       xgb_model.pkl
-            │
-            ├───static
-            │   ├───css
-            │   │       b3.png
-            │   │       style2.css
-            │   │
-            │   └───js
-            │           script2.js
-            │
-            ├───templates
-            │       index.html
-            │
-            └───__pycache__
-                    data_encoding.cpython-310.pyc
-                    insert_Data_mysql.cpython-310.pyc 
+├───Main
+│   ├───Sentiment_Analysis_for_Jumia_Reviews
+│   │   │   EDA_and_data_Cleaning.ipynb
+│   │   │   final_data.csv
+│   │   │   model.pkl
+│   │   │   model_tfidf.pkl
+│   │   │   Sentiments Analysis Model.ipynb
+│   │   │
+│   │   ├───.ipynb_checkpoints
+│   │   │       EDA_and_data_Cleaning-checkpoint.ipynb
+│   │   │
+│   │   ├───Data Collection
+│   │   │   │   cleaned_data_tp6.csv
+│   │   │   │   final_data.csv
+│   │   │   │   jumia_comments.csv
+│   │   │   │   make_final_data.ipynb
+│   │   │   │
+│   │   │   ├───.ipynb_checkpoints
+│   │   │   │       make_final_data-checkpoint.ipynb
+│   │   │   │
+│   │   │   └───web scrapping
+│   │   │       │   Comments_scraping.ipynb
+│   │   │       │   jumia_comments.csv
+│   │   │       │   links.txt
+│   │   │       │
+│   │   │       └───.ipynb_checkpoints
+│   │   │               Comments_scraping-checkpoint.ipynb
+│   │   │
+│   │   └───Web_App_Recommendation
+│   │       │   app.py
+│   │       │   clean_comment.py
+│   │       │   comments_classification.py
+│   │       │   model.pkl
+│   │       │   model_tfidf.pkl
+│   │       │   translate_comment.py
+│   │       │
+│   │       ├───models
+│   │       │       model.pkl
+│   │       │       model_tfidf.pkl
+│   │       │
+│   │       ├───static
+│   │       │   ├───css
+│   │       │   │       style.css
+│   │       │   │
+│   │       │   ├───js
+│   │       │   │       script.js
+│   │       │   │
+│   │       │   └───uploads
+│   │       │           1.jpg
+│   │       │           2.jpg
+│   │       │           Apple iPhone 15 Pro.jpg
+│   │       │           Apple Watch.jpg
+│   │       │           apple.jpg
+│   │       │           clavie.jpg
+│   │       │           logo.png
+│   │       │           Redmi-A2-Blue.png
+│   │       │           Samsung a34.jpg
+│   │       │           Samsung_Galaxy.jpg
+│   │       │           XIAOMI Redmi Note 12.jpg
+│   │       │
+│   │       ├───templates
+│   │       │       index.html
+│   │       │
+│   │       └───__pycache__
+│   │               clean_comment.cpython-310.pyc
+│   │               comments_classification.cpython-310.pyc
+│   │               translate_comment.cpython-310.pyc
+│   │
+│   └───Smartphone_Price_Prediction_System
+│       │   best_model.pkl
+│       │   EDA_smartphone_Data.ipynb
+│       │   jumia_mobile_phone.csv
+│       │   Regression_Model.ipynb
+│       │   smartphone_Data.csv
+│       │   Smartphone_data_transformation.ipynb
+│       │   smartphone_Data_with_mean_price.csv
+│       │
+│       ├───.ipynb_checkpoints
+│       │       EDA_smartphone_Data-checkpoint.ipynb
+│       │       Regression_Model-checkpoint.ipynb
+│       │       Smartphone_data_transformation-checkpoint.ipynb
+│       │
+│       ├───Data Collection
+│       │       jumia_mobile_phone.csv
+│       │       Mobile_phone_data_scraping.py
+│       │
+│       └───Web_App_prediction
+│           │   app.py
+│           │   continues_learning.py
+│           │   data_encoding.py
+│           │   insert_Data_mysql.py
+│           │
+│           ├───models
+│           │       xgb_model.pkl
+│           │
+│           ├───static
+│           │   ├───css
+│           │   │       b3.png
+│           │   │       style2.css
+│           │   │
+│           │   └───js
+│           │           script2.js
+│           │
+│           ├───templates
+│           │       index.html
+│           │
+│           └───__pycache__
+│                   data_encoding.cpython-310.pyc
+│                   insert_Data_mysql.cpython-310.pyc
+│
+└───Memory
+        Machine Learning Project Final Writeup.pdf
+        Pre_ML.pptx
                     
 ```
+- In the memory folder you will find the presentation (ppt file) that I presented in the class, and also you will find the report (pdf file) as a research paper which Contain the details of this project (from data collection to model deploying)
 
 ## 5. How to Run
 
