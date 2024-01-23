@@ -267,7 +267,7 @@ By following these steps, you can run both web applications, each serving its sp
 ## 7. Conclusion
 - The project successfully combines sentiment analysis and price prediction to assist customers in making informed online purchasing decisions. The web application provides a user-friendly interface for simulating product recommendations.
 
-- you can watch the demo video <a href="https://www.youtube.com/watch?v=rVQFABynodw" target="_blank">here</a> 
+- you can watch the demo video <a href="https://youtu.be/u313g9b_VLQ" target="_blank">here</a> 
 
 ## 8. Contacts
 For any inquiries or further information, please contact:
