@@ -1,14 +1,14 @@
 # Sentiment-Analysis-for-Jumia-Reviews-Smartphone-Price-Prediction-System
 
 ## Table of Contents
-1. [Project Overview](#project-overview)
-2. [Technologies Used](#technologies-used)
-3. [Architecture](#architecture)
-4. [Repository Structure](#repository-structure)
-5. [How to Run](#how-to-run)
-6. [Acknowledgments](#acknowledgments)
-7. [Conclusion](#conclusion)
-8. [Contacts](#contacts)
+1. [Project Overview](#1-project-overview)
+2. [Technologies Used](#2-technologies-used)
+3. [Architecture](#3-architecture)
+4. [Repository Structure](#4-repository-structure)
+5. [How to Run](#5-how-to-run)
+6. [Acknowledgments](#6-acknowledgments)
+7. [Conclusion](#7-conclusion)
+8. [Contacts](#8-contacts)
 
 ## 1. Project Overview
 The project focuses on developing a system based on customer sentiment analysis. The main challenge is to assist potential customers in making informed decisions about online purchases by evaluating the satisfaction of current users. Data for this task is sourced from the Jumia website. The goal is to collect and analyze customer comments on various products to determine the associated sentiments (positive/negative). The algorithm is then implemented to aid customers in decision-making, such as recommending or not recommending a product based on the trained model. If time permits, a small web application will be simulated where products and comments are displayed, and clicking on a product captures and analyzes the comments, providing a recommendation.
